@@ -1,0 +1,71 @@
+// Classe Produto
+public class Produto {
+    // Atributos privados
+    private int id;
+    private String nome;
+    private double preco;
+    
+    // Construtor sobrecarregado
+    public Produto(int id, String nome, double preco) {
+        this.id = id;
+        this.nome = nome;
+        this.preco = preco;
+    }
+    
+    // Métodos getters
+    public int getId() {
+        return id;
+    }
+    
+    public String getNome() {
+        return nome;
+    }
+    
+    public double getPreco() {
+        return preco;
+    }
+    
+    // Métodos setters
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+    
+    // Método para calcular o desconto
+    public double calcularDesconto(double desconto) {
+        return preco - (preco * desconto / 100);
+    }
+    
+    // Método para formatar a saída do Produto
+    @Override
+    public String toString() {
+        return "Produto ID = " + id + ", Nome = " + nome + ", Preço = " + preco;
+    }
+}
+
+// Classe de teste TesteProduto
+public class TesteProduto {
+    public static void main(String[] args) {
+        // Criando objetos da classe Produto
+        Produto produto1 = new Produto(0, "Chinelo", 39.99);
+        Produto produto2 = new Produto(1, "Camiseta", 29.99);
+        
+        // Demonstrando o uso dos métodos getters e setters
+        System.out.println(produto1.toString());
+        System.out.println("Preço com Desconto =" + produto1.calcularDesconto(10));
+
+        System.out.println(produto2.toString());
+        System.out.println("Preço com Desconto =" + produto2.calcularDesconto(10));
+        
+        // Modificando atributos
+        produto1.setNome("Tênis");
+        produto1.setPreco(59.99);
+        
+        // Mostrando as modificações
+        System.out.println(produto1.toString());
+        System.out.println("Preço com Desconto =" + produto1.calcularDesconto(20));
+    }
+}
