@@ -1,0 +1,49 @@
+
+public class Revista extends Publicacao{
+	private int numEdicao;
+	private String mesPublicacao;
+	
+	//CONSTRUTORES
+	public Revista() {
+	
+	}
+	public Revista(int numEdicao, String mesPublicacao) {
+		this.mesPublicacao = mesPublicacao;
+		this.numEdicao = numEdicao;
+	}
+	//GETTERS E SETTERS
+	
+	public int getNumEdicao() {
+		return this.numEdicao;
+	}
+	public void setNumEdicao(int numEdicao) {
+		this.numEdicao = numEdicao;
+	}
+	public String getMesPublicacao() {
+		return this.mesPublicacao;
+	}
+	public void setMesPublicacao(String mesPublicacao) {
+		this.mesPublicacao = mesPublicacao;
+	}
+	
+	//SOBREESCRITA DO MÉTODO
+	
+	@Override 
+	
+	public void exibirDetalhes() {
+		
+		super.exibirDetalhes();
+		System.out.println("número da edição: "+this.numEdicao);
+		System.out.println("mês da publicação: "+this.mesPublicacao);
+	}
+	
+	//SOBRECARGA DO MÉTODO 
+	void exibirDetalhes(boolean exibicao) {
+		if (exibicao == false){
+			System.out.println("número da edição: "+this.numEdicao);
+		}else 
+			System.out.println("número da edição: "+this.numEdicao);
+			System.out.println("mês da publicação: "+this.mesPublicacao);
+	}
+	
+}
