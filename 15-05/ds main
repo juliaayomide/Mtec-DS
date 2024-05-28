@@ -1,0 +1,33 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String titulo, autor;
+		int anodePublicacao;
+		
+		//INSTANCIANDO O OBJETO LIVRO
+		Livro l1 = new Livro(111,"Amulet Books");
+		l1.setTitulo("Diário de um banana");
+		l1.setAutor("jeff kinney");
+		l1.setAnoPublicacao(2007);
+		l1.exibirDetalhes(false);
+		
+		
+		//INSTANCIANDO O OBJETO REVISTA
+		Revista r1 = new Revista(160,"Abril");
+		r1.setTitulo("Capricho");
+		r1.setAutor("Grupo Abril");
+		r1.setAnoPublicacao(2000);
+		r1.exibirDetalhes(true);
+		
+		
+
+		System.out.println("Informações do livro");
+		l1.exibirDetalhes();
+		System.out.println();
+		System.out.println("Informações da revista");
+		r1.exibirDetalhes();
+	}
+
+}
