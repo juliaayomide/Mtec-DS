@@ -1,0 +1,21 @@
+//Orientação a objetos tme 4 pilares sendo eles:  abstração, encapsulamento, herança e polimorfismo.
+
+Resumo de cada pilar:
+
+Abstração:
+Envolve a simplificação de objetos complexos do mundo real;
+Para representá-los de forma mais simples no código;
+Se desdobra em:
+  Classes:
+São conjuntos de objetos que possuem o mesmo tipo;
+  Objetos:
+São instâncias das classes;
+
+Encapsulamento:
+É a habilidade de esconder as características intrínsecas de um dado objeto de outros objetos;
+
+Herança:
+Permite a criação de classes derivadas (subclasses) que herdam atributos e métodos de uma classe base (superclasse);
+
+Polimorfismo:
+É a propriedade de duas ou mais classes derivadas de uma mesma superclasse responderem a mesma mensagem, mas cada subclasse responde de uma forma diferente da outra classe derivada.
