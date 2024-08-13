@@ -1,0 +1,17 @@
+package exfixacao;
+public class Triangulo extends Formag {
+    private double base;
+    private double altura;
+ 
+ 
+    public Triangulo (double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+   
+    }
+    @Override
+    public double Carea() {
+        double area = base*altura/2;
+        return area;
+    }
+}
