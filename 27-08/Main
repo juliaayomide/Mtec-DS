@@ -1,0 +1,82 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String cor, modelo;
+        double valort, combustivel;
+
+        Scanner in = new Scanner(System.in);
+
+        // Criando o primeiro carro
+        System.out.println("Insira os dados do primeiro carro:");
+        System.out.println("Digite o modelo do primeiro carro: ");
+        modelo = in.next();
+        System.out.println("Digite a cor do primeiro carro:");
+        cor = in.next();
+        System.out.println("Digite o combustível do primeiro carro:");
+        combustivel = in.nextDouble();
+        System.out.println("Digite o valor de tabela do primeiro carro:");
+        valort = in.nextDouble();
+
+        Carro car1 = new Carro(modelo, valort, cor, combustivel, 0.0);
+        car1.calcularIpva(); // Calcula o IPVA 
+
+        // Criando o segundo carro
+        System.out.println("Insira os dados do segundo carro:");
+        System.out.println("Digite o modelo do segundo carro: ");
+        modelo = in.next();
+        System.out.println("Digite a cor do segundo carro:");
+        cor = in.next();
+        System.out.println("Digite o combustível do segundo carro:");
+        combustivel = in.nextDouble();
+        System.out.println("Digite o valor de tabela do segundo carro:");
+        valort = in.nextDouble();
+
+        Carro car2 = new Carro(modelo, valort, cor, combustivel, 0.0);
+        car2.calcularIpva(); // Calcula o IPVA 
+
+        // Criando a primeira moto
+        System.out.println("Insira os dados da primeira moto:");
+        System.out.println("Digite o modelo da primeira moto: ");
+        modelo = in.next();
+        System.out.println("Digite a cor da primeira moto:");
+        cor = in.next();
+        System.out.println("Digite o combustível da primeira moto:");
+        combustivel = in.nextDouble();
+        System.out.println("Digite o valor de tabela da primeira moto:");
+        valort = in.nextDouble();
+
+        Moto moto1 = new Moto(modelo, valort, cor, combustivel, 0.0);
+        moto1.calcularIpva(); // Calcula o IPVA com base no valor de tabela
+
+        // Criando a segunda moto
+        System.out.println("Insira os dados da segunda moto:");
+        System.out.println("Digite o modelo da segunda moto: ");
+        modelo = in.next();
+        System.out.println("Digite a cor da segunda moto:");
+        cor = in.next();
+        System.out.println("Digite o combustível da segunda moto:");
+        combustivel = in.nextDouble();
+        System.out.println("Digite o valor de tabela da segunda moto:");
+        valort = in.nextDouble();
+
+        Moto moto2 = new Moto(modelo, valort, cor, combustivel, 0.0);
+        moto2.calcularIpva(); // Calcula o IPVA com base no valor de tabela
+
+        // Imprimindo ficha técnica
+        System.out.println("Ficha Técnica do primeiro carro:");
+        car1.imprimirFicha();
+        System.out.println("");
+        System.out.println("Ficha Técnica do segundo carro:");
+        car2.imprimirFicha();
+        System.out.println("");
+        System.out.println("Ficha Técnica da primeira moto:");
+        moto1.imprimirFicha();
+        System.out.println("");
+        System.out.println("Ficha Técnica da segunda moto:");
+        moto2.imprimirFicha();
+        System.out.println("");
+
+        in.close();
+    }
+}
