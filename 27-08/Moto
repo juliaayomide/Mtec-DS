@@ -1,0 +1,13 @@
+class Moto extends Veiculo {
+ 
+	public Moto(String modelo, double valorTabela, String cor, double combustivel, double ipva) {
+		super(modelo, valorTabela, cor, combustivel, ipva);
+	}
+ 
+		@Override
+		   public void calcularIpva() {
+		       double ipva = getValorTabela() * 0.02;
+		       setIpva(ipva);
+		   }
+ 
+}
