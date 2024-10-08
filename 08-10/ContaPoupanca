@@ -1,0 +1,34 @@
+public class ContaPoupanca extends ContaB {
+    private double taxaRendimento;
+
+    //Criação do contrutor
+    public ContaPoupanca(double sInicial, double taxaRendimento) {
+        super(sInicial);
+        this.taxaRendimento = taxaRendimento;
+    }
+
+    //Getters e Setters
+    public double getTaxaRendimento() {
+        return taxaRendimento;
+    }
+
+    public void setTaxaRendimento(double taxaRendimento) {
+        this.taxaRendimento = taxaRendimento;
+    }
+
+    // Método para aplicar rendimento sobre o saldo ao final de cada mês
+    public void aplicarRendimento() {
+        this.saldo += this.saldo * (this.taxaRendimento / 100);
+        System.out.println("Taxa de rendimento aplicada, saldo atualizado. Novo saldo: " + this.saldo);
+    }
+
+    @Override
+    public void sacar(double valor) {
+        if (valor <= this.saldo) {
+            this.saldo -= valor;
+            System.out.println("Saque de " + valor + " efetuado com sucesso!");
+        } else {
+            System.out.println("Não foi possível realizar o saque pois você não possui mais saldo e excedeu o limite do cheque especial.");
+        }
+    }
+}
