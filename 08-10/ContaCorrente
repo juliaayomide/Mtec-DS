@@ -1,0 +1,32 @@
+public class ContaCorrente extends ContaB {
+    private double limiteCheque;
+ 
+    //Criação do construtor
+
+    public ContaCorrente(double sInicial, double limiteCheque) {
+        super(sInicial);
+        this.limiteCheque = limiteCheque;
+    }
+
+    //Getters e Setters
+    public double getLimiteCheque() {
+        return limiteCheque;
+    }
+
+    public void setLimiteCheque(double limiteCheque) {
+        this.limiteCheque = limiteCheque;
+    }
+  
+
+
+    //Sobrescrita do método sacar
+    @Override
+    public void sacar(double valor) {
+        if (valor <= this.saldo + this.limiteCheque) {
+            this.saldo -= valor;
+            System.out.println("Saque de " + valor + " efetuado com sucesso!");
+        } else {
+            System.out.println("Não foi possível realizar o saque pois você não possui mais saldo e excedeu o limite do cheque especial.");
+        }
+    }
+}
