@@ -1,0 +1,5 @@
+public interface Conta {
+        void depositar(double valor);
+        double verSaldo();
+        void sacar(double valor);
+    }
