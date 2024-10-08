@@ -1,0 +1,25 @@
+public abstract class ContaB implements Conta {
+    protected double saldo;
+
+    //Criação do construtor
+    public ContaB(double sInicial) {
+        this.saldo = sInicial;
+    }
+
+    //Sobrescrita do método depositar
+    @Override
+    public void depositar(double valor) {
+        if (valor > 0) {
+            this.saldo += valor;
+            System.out.println("Depósito de " + valor + " efetuado com sucesso!");
+        } else {
+            System.out.println("Valor de depósito inválido.");
+        }
+    }
+
+    //Sobrescrita do método verSaldo
+    @Override
+    public double verSaldo() {
+        return this.saldo;
+    }
+}
